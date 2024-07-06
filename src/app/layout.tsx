@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { ReactNode } from "react";
+import { Outfit } from "next/font/google";
+
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Hangyul Yi | Portfolio",
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html>
-      <body>
+    <html lang="en">
+      <body className={font.className}>
         { children }
       </body>
     </html>
