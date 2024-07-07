@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useTransition } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import USFlag from '/us.svg';
-import KRFlag from '/kr.svg';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/config';
 
@@ -11,12 +9,13 @@ export default function LocaleSwitcher() {
   const t = useTranslations('LocaleSwitcher');
   const currentLocale = useLocale();
   const [isPending, startTransition] = useTransition();
-  const [locale, setLocale] = useState(currentLocale);
+  const [locale, setLocale] = useState<Locale>(currentLocale as Locale);
 
   useEffect(() => {
-    setLocale(currentLocale);
+    setLocale(currentLocale as Locale);
   }, [currentLocale]);
 
+//   update local state to reflect new locale
   function onChange(value: Locale) {
     startTransition(() => {
       setUserLocale(value);
@@ -29,16 +28,16 @@ export default function LocaleSwitcher() {
     onChange(nextLocale);
   };
 
-  const currentIcon = locale === 'en' ? <USFlag /> : <KRFlag />;
+  const currentIconSrc = locale === 'en' ? '/us.svg' : '/kr.svg';
 
   return (
-    <div className="relative">
+    <div >
       <button
         aria-label={t('switchLocale')}
         onClick={handleClick}
         className={`rounded-sm p-2 transition-colors hover:bg-slate-200 ${isPending ? 'pointer-events-none opacity-60' : ''}`}
       >
-        {currentIcon}
+        <img src={currentIconSrc} alt={currentLocale === 'en' ? 'US Flag' : 'KR Flag'} className='w-6 h-6' />
       </button>
     </div>
   );

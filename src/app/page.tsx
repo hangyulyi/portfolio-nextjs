@@ -10,6 +10,9 @@ export default function Home() {
       <div>
         <LocaleSwitcher />
       </div>
+      <div>
+        <h1>{t('title')}</h1>
+      </div>
     </Layout>
   );
 }
