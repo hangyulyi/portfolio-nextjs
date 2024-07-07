@@ -14,7 +14,8 @@ const config: Config = {
         'green': '#0a7273',
         'yellow': '#fda521',
         'midnight': '#033043',
-      }
+      },
+      
     },
   },
   plugins: [],
