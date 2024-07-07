@@ -1,8 +1,17 @@
 {
-    
     "title": "이한결 | 포트폴리오",
     "description": "환영합니당",
     "Index": {
         "title": "안녕하세요!"
+    },
+    "AppLayout": {
+        "home": "홈",
+        "projects": "프로젝트",
+        "contact": "연락"
+    },
+    "LocaleSwitcher": {
+        "kr": "한국어",
+        "en": "영어",
+        "label": "언어"
     }
 }

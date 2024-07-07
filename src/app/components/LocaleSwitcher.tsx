@@ -28,7 +28,7 @@ export default function LocaleSwitcher() {
     onChange(nextLocale);
   };
 
-  const currentIconSrc = locale === 'en' ? '/us.svg' : '/kr.svg';
+  const currentIconSrc = locale === 'en' ? '/assets/us.svg' : '/assets/kr.svg';
 
   return (
     <div >

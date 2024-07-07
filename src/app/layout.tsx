@@ -3,6 +3,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
 import { getMetadata } from "./metadata";
 
+import Navbar from "./components/Navbar";
+
 import "./globals.css";
 
 const outfit = Outfit({ subsets: ["latin"] });
@@ -23,7 +25,8 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={fontClass}>
         <NextIntlClientProvider messages={ messages }>
-          { children }
+          <Navbar />
+          {children}
         </NextIntlClientProvider>
       </body>
     </html>
