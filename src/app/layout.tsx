@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages } from "next-intl/server";
+
 import "./globals.css";
 
 const font = Outfit({ subsets: ["latin"] });
@@ -24,14 +27,22 @@ export const metadata: Metadata = {
   }
 };
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+export default async function RootLayout({
+  children
+}: {
+  children: React.ReactNode;
+}) {
+  const locale = await getLocale();
+
+  const messages = await getMessages();
+  
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={font.className}>
-        { children }
+        <NextIntlClientProvider messages={ messages }>
+          { children }
+        </NextIntlClientProvider>
       </body>
     </html>
   )
 }
-
-export default Layout;

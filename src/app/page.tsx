@@ -1,10 +1,14 @@
 import Layout from "./layout";
+import { useTranslations } from "next-intl";
+import LocaleSwitcher from "./components/LocaleSwitcher";
 
 export default function Home() {
+  const t = useTranslations('Index');
+
   return (
     <Layout>
-      <div className="text-red">
-        hello
+      <div>
+        <LocaleSwitcher />
       </div>
     </Layout>
   );
