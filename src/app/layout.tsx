@@ -34,7 +34,6 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const locale = await getLocale();
-
   const messages = await getMessages();
 
   // dynamic font based on locale

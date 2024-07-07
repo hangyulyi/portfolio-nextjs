@@ -35,9 +35,12 @@ export default function LocaleSwitcher() {
       <button
         aria-label={t('switchLocale')}
         onClick={handleClick}
-        className={`rounded-sm p-2 transition-colors hover:bg-slate-200 ${isPending ? 'pointer-events-none opacity-60' : ''}`}
+        className={`transition-transform transform hover:translate-y-[-2px] hover:shadow-lg rounded-md ${isPending ? 'pointer-events-none opacity-60' : ''}`}
       >
-        <img src={currentIconSrc} alt={currentLocale === 'en' ? 'US Flag' : 'KR Flag'} className='w-6 h-6' />
+        <img 
+            src={currentIconSrc} 
+            alt={currentLocale === 'en' ? 'US Flag' : 'KR Flag'} 
+            className='w-16 h-12 rounded-md' />
       </button>
     </div>
   );
