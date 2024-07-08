@@ -4,6 +4,7 @@ import { getLocale, getMessages } from "next-intl/server";
 import { getMetadata } from "./metadata";
 
 import Navbar from "./components/Navbar";
+import ScrollUpBtn from "./components/ScrollUpBtn";
 
 import "./globals.css";
 
@@ -26,7 +27,8 @@ export default async function RootLayout({
       <body className={fontClass}>
         <NextIntlClientProvider messages={ messages }>
           <Navbar />
-          {children}
+          <main>{children}</main>
+          <ScrollUpBtn />
         </NextIntlClientProvider>
       </body>
     </html>
