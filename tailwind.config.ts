@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         'off-white': '#f2f0ef',
-        'ex-white': 'e9e3d5',
+        'exwhite': 'e9e3d5',
         'green': '#0a7273',
         'yellow': '#fda521',
         'midnight': '#033043',

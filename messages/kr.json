@@ -19,6 +19,11 @@
     "Contact": {
         "name": "성함",
         "email": "이메일",
-        "message": "메세지"
+        "message": "메세지",
+        "title": "ㅇㅅㅇ",
+        "title_blurb": "연락은 아래 양식으로 편하게 주세요!"
+    },
+    "ButtonOne": {
+        "contactSubmit": "메세지 보내기"
     }
 }

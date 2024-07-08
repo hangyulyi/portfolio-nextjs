@@ -20,6 +20,11 @@
     "Contact": {
         "name": "Name",
         "email": "Email",
-        "message": "Message"
+        "message": "Message",
+        "title": "Contact Me",
+        "title_blurb": "You can message me with the form below! Please hesitate to reach out :]"
+    },
+    "ButtonOne": {
+        "contactSubmit": "Send message"
     }
 }

@@ -28,12 +28,11 @@ export default function LocaleSwitcher() {
     onChange(nextLocale);
   };
 
-  const currentIconSrc = locale === 'en' ? '/assets/ca.svg' : '/assets/kr.svg';
+  const currentIconSrc = locale === 'en' ? '/assets/kr.svg' : '/assets/ca.svg';
 
   return (
     <div >
       <button
-        aria-label={t('switchLocale')}
         onClick={handleClick}
         className={`transition-transform transform hover:translate-y-[2px] hover:shadow-lg rounded-md ${isPending ? 'pointer-events-none opacity-60' : ''}`}
       >
