@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'off-white': '#f5f5f5',
+        'off-white': '#f2f0ef',
         'ex-white': 'e9e3d5',
         'green': '#0a7273',
         'yellow': '#fda521',

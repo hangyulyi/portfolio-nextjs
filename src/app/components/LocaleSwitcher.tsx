@@ -28,7 +28,7 @@ export default function LocaleSwitcher() {
     onChange(nextLocale);
   };
 
-  const currentIconSrc = locale === 'en' ? '/assets/us.svg' : '/assets/kr.svg';
+  const currentIconSrc = locale === 'en' ? '/assets/ca.svg' : '/assets/kr.svg';
 
   return (
     <div >
@@ -40,7 +40,7 @@ export default function LocaleSwitcher() {
         <img 
             src={currentIconSrc} 
             alt={currentLocale === 'en' ? 'US Flag' : 'KR Flag'} 
-            className='w-12 h-9 rounded-md' />
+            className='w-8 h-6 rounded-md' />
       </button>
     </div>
   );
