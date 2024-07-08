@@ -5,6 +5,7 @@ import { getMetadata } from "./metadata";
 
 import Navbar from "./components/Navbar";
 import ScrollUpBtn from "./components/ScrollUpBtn";
+import Footer from "./components/Footer";
 
 import "./globals.css";
 
@@ -28,6 +29,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={ messages }>
           <Navbar />
           <main>{children}</main>
+          <Footer />
           <ScrollUpBtn />
         </NextIntlClientProvider>
       </body>
