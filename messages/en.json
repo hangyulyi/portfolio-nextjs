@@ -16,5 +16,10 @@
         "kr": "Korean",
         "en": "English",
         "label": "Language"
+    },
+    "Contact": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
     }
 }

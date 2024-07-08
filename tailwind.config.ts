@@ -16,7 +16,14 @@ const config: Config = {
         'yellow': '#fda521',
         'midnight': '#033043',
       },
-      
+      boxShadow: {
+        bold_r: "10px 10px",
+        bold_r_xs: "3px 3px",
+        bold_r_sm: "5px 5px",
+        bold_r_md: "7px 7px",
+        bold_l: "-10px 10px",
+        zero: "0px 0px",
+      }
     },
   },
   plugins: [],
