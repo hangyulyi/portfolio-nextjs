@@ -1,7 +1,7 @@
 'use client'
 
 import React from "react";
-import { FaCaretUp } from "react-icons/fa";  
+import { FaCaretSquareUp } from "react-icons/fa";  
 
 const ScrollUpBtn: React.FC = () => {
     const handleScrollToTop =() => {
@@ -11,10 +11,10 @@ const ScrollUpBtn: React.FC = () => {
     return (
         <button
             onClick={handleScrollToTop}
-            className="fixed bottom-4 right-4 flex items-center justify-center w-12 h-12 text-green hover:transition-transform duration-300 hover:scale-110"
+            className="fixed bottom-4 right-4 flex items-center justify-center h-12 w-12 hover:transition-transform duration-300 hover:scale-110"
             aria-label="Scroll to top"
         >
-            <FaCaretUp className="w-8 h-8" />
+            <FaCaretSquareUp className="text-green h-10 w-10" />
         </button>
     )
 }
