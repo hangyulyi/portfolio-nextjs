@@ -17,6 +17,9 @@
         "en": "English",
         "label": "Language"
     },
+    "Typed": {
+        "home": "Greetings"
+    },
     "Contact": {
         "name": "Name",
         "email": "Email",
@@ -25,6 +28,9 @@
         "title_blurb": "You can message me with the form below! Please hesitate to reach out :]",
         "messageSent": "Message sent!",
         "messageError": "Error sending message"
+    },
+    "Projects": {
+        "title": "Projects"
     },
     "ButtonOne": {
         "contactSubmit": "Send message"

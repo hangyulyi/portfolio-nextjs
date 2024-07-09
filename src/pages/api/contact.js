@@ -5,10 +5,6 @@ export default async function ContactAPI (req, res) {
 
     const user = process.env.SMTP_USER;
 
-    const data = {
-        name, email, message
-    }
-
     const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
         port: 465,

@@ -25,6 +25,9 @@
         "messageSent": "메시지 전송됐습니다!",
         "messageError": "메시지 전송 오류"
     },
+    "Projects": {
+        
+    },
     "ButtonOne": {
         "contactSubmit": "메시지 보내기"
     }
