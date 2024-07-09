@@ -6,6 +6,7 @@ interface ButtonOneProps {
     // href: string;
     textKey: string;
     input?: { value: string }; //form submit
+    disabled?: boolean;
     // onClick?: () => void; // etc
 }
 
@@ -13,6 +14,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
     // href,
     textKey,
     input,
+    disabled,
     // onClick
 }) => {
     const t = useTranslations('ButtonOne')
@@ -27,6 +29,7 @@ const ButtonOne: React.FC<ButtonOneProps> = ({
             <button
                 type="submit"
                 className={allClasses}
+                disabled={disabled}
             >
                 {translated}
             </button>

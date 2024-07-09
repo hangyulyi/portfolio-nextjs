@@ -22,7 +22,9 @@
         "email": "Email",
         "message": "Message",
         "title": "Contact Me",
-        "title_blurb": "You can message me with the form below! Please hesitate to reach out :]"
+        "title_blurb": "You can message me with the form below! Please hesitate to reach out :]",
+        "messageSent": "Message sent!",
+        "messageError": "Error sending message"
     },
     "ButtonOne": {
         "contactSubmit": "Send message"

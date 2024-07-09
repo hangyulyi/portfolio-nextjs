@@ -25,7 +25,7 @@ export default async function ContactAPI (req, res) {
             from: user,
             to: "hangyulyi3@gmail.com",
             replyTo: email,
-            subject: `Contact form submission from ${name}`,
+            subject: `Contact message from ${name}`,
             html:`
             <p>Name: ${name}</p>
             <p>Email: ${email}</p>
