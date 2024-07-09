@@ -22,6 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Tools used
 - next-intl
+- nodemailer
 
 ## Deploy on Vercel
 

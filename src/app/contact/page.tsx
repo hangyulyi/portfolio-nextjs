@@ -7,7 +7,7 @@ export default function ContactPage() {
     return (
         <div className="mx-auto max-w-2xl px-4 py-12 my-10 text-center">
             
-            <h1 className="font-bold text-4xl pt-2 pb-4">{t('title')}</h1>
+            <h1 className="font-bold text-4xl pt-2 pb-4 uppercase tracking-wider">{t('title')}</h1>
             <p>{t('title_blurb')}</p>
             
             <ContactForm />

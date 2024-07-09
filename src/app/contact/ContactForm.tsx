@@ -16,6 +16,21 @@ export default function ContactForm() {
             message: String(event.target.message.value),
         }
 
+        const response = await fetch("/api/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        })
+
+        if(response.ok) {
+            console.log("Message sent successfully")
+        }
+        if(!response.ok) {
+            console.log("Error sending message")
+        }
+
     }
 
     return (
