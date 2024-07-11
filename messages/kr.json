@@ -20,7 +20,7 @@
         "name": "성함",
         "email": "이메일",
         "message": "메시지",
-        "title": "ㅇㅅㅇ",
+        "title": "문의 사항",
         "title_blurb": "연락은 아래 양식으로 편하게 주세요!",
         "messageSent": "메시지 전송됐습니다!",
         "messageError": "메시지 전송 오류"
