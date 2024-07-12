@@ -15,7 +15,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects }) => {
     }
 
     return (
-        <div className='flex flex-wrap justify-center max-w-7xl mx-auto'>
+        <div className='grid gap-6 max-w-7xl mx-auto'>
             {projects.map((project: Project) => (
                 <Link href={`/projects/${project.slug}`} key={project.id} passHref>
                     <div className='w-full p-4 cursor-pointer'>
