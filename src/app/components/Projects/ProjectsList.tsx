@@ -1,18 +1,29 @@
 // dynamic routing for projects (component for cards?)
-
+import React from 'react'
 import Link from 'next/link'
 
-import { Project, projects } from "../../projects/Project"
+import ProjectsCard from './ProjectsCard'
+import { Project } from "../../projects/Project"
 
-const ProjectsList: React.FC = () => {
+interface ProjectsListProps {
+    projects: Project[];
+}
+
+const ProjectsList: React.FC<ProjectsListProps> = ({ projects }) => {
+    if (!projects || projects.length === 0) {
+        return <div>No projects found</div>
+    }
+
     return (
-        <ul>
+        <div className='flex flex-wrap justify-center max-w-7xl mx-auto'>
             {projects.map((project: Project) => (
-                <li key={project.id}>
-                    <Link href={`/projects/${project.slug}`}>{project.name}</Link>
-                </li>
+                <Link href={`/projects/${project.slug}`} key={project.id} passHref>
+                    <div className='w-full p-4 cursor-pointer'>
+                        <ProjectsCard project={project} />
+                    </div>
+                </Link>
             ))}
-        </ul>
+        </div>
     )
 }
 

@@ -13,10 +13,10 @@ export const projects: Project[] = [
     { 
         id: 1, 
         name: "Portfolio Website", 
-        description: "You're looking at it right now! Using Next.js, TailwindCSS, and TypeScript, this portfolio site has responsive and makes use of a couple fun modules. \nAn example of one of the module used is next-intl! You might've noticed the flag icon in the header and when you press it, it'll provide a translation of the site, offering a website in both Korean and English!\nYou can check out some other modules I used by checking out the README.md in the GitHub repo!", 
+        description: "You're looking at it right now! Using Next.js, TailwindCSS, and TypeScript, this portfolio site is responsive and makes use of a couple fun modules. \nAn example of one of the module used is next-intl! You might've noticed the flag icon in the header and when you press it, it'll provide a translation of the site, offering a website in both Korean and English!\nYou can check out some other modules I used by checking out the README.md in the GitHub repo!", 
         slug: "portfolio", 
         technologies: ["Next.js", "TailwindCSS", "TypeScript"], 
-        link: "https://github.com/hangyulyi/Image-Classifier",
+        link: "https://github.com/hangyulyi/portfolio-nextjs",
         img: "https://hangyulyi.github.io/assets/flower_classifier.png",
         code: true
     },
