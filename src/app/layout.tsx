@@ -25,10 +25,12 @@ export default async function RootLayout({
   
   return (
     <html lang={locale}>
-      <body className={fontClass}>
+      <body className={`${fontClass} flex flex-col min-h-screen `}>
         <NextIntlClientProvider messages={ messages }>
           <Navbar />
-          <main>{children}</main>
+          <main className="flex-grow">
+            {children}
+          </main>
           <Footer />
           <ScrollUpBtn />
         </NextIntlClientProvider>
