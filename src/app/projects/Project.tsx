@@ -29,5 +29,14 @@ export const projects: Project[] = [
         link: "https://github.com/hangyulyi/Image-Classifier",
         img: "https://hangyulyi.github.io/assets/flower_classifier.png",
         code: true
+    },
+    {
+        id: 3, 
+        name: "BMERIT Website & Newsletter", 
+        description: "Develop and deploy the main website for BMERIT at University of Calgary. \nI've also created and made a newsletter service for the club using MJML to create the responsive HTML and as of right now, I'm working on making an automated mailing system to make the emailing process smoother for the club's monthly newsletter.", 
+        slug: "bmerit", 
+        technologies: ["Web development", "Newsletter", "HTML/CSS", "JavaScript", "MJML"], 
+        img: "https://hangyulyi.github.io/assets/bmerit_logo.png",
+        code: false
     }
 ]

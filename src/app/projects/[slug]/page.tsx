@@ -16,7 +16,7 @@ export default function ProjectPost({ params }: { params: { slug: string } }) {
     return (
         <div className="p-10 max-w-[2000px] mx-auto mt-10 pb-0">
             <div className="bg-transparent mx-5 items-center justify-center md:flex">
-                <section className="md:w-6/12">
+                <section className="md:w-6/12 pr-10">
                     <h1 className="font-bold text-4xl pt-2 pb-10 tracking-wider">{project.name}</h1>
                     <div >
                         {project.description.split('\n').map((line, index) => (
@@ -41,7 +41,7 @@ export default function ProjectPost({ params }: { params: { slug: string } }) {
                 </section>
                 <div className="p-0 mx-5">
                     {/* img- host */}
-                    <img src={project.img} className="rounded-md"></img>
+                    <img src={project.img} className="rounded-md max-w-60"></img>
                 </div>
             </div>
 

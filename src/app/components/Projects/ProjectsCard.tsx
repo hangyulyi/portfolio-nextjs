@@ -6,9 +6,11 @@ interface ProjectsCardProps {
     project: Project;
 }
 
+
+
 const ProjectsCard: React.FC<ProjectsCardProps> = ({ project }) => {
     return (
-        <div className="bg-white rounded-lg shadow-md transition-all transform hover:shadow-[0_4px_8px_rgba(0,0,0,1)] hover:-translate-y-2 p-4">
+        <div className="bg-white rounded-lg transition-all transform shadow-[0px_10px_1px_rgba(64,_64,_64)] hover:translate-y-2 hover:shadow-none p-4">
             <img src={project.img} alt={project.name} className="rounded-t-lg w-full h-48 object-contain" />
             <h2 className="text-xl font-bold mt-2">{project.name}</h2>
             <div className="mt-4 flex flex-wrap">

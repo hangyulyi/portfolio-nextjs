@@ -27,7 +27,7 @@ const ProjectsSearch: React.FC = () => {
                 value={searchQuery}
                 onChange={handleSearchChange}
                 placeholder='Search projects...'
-                className='p-2 border border-gray-300 rounded-lg w-full mb-4'
+                className='p-2 border border-gray-300 rounded-lg w-full mb-4 max-w-2xl'
             />
             <ProjectsList projects={filteredProjects} />
         </div>
