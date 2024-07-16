@@ -9,6 +9,8 @@ export interface Project {
     code: boolean;
 }
 
+// for future implementation, create projectsEN and projectsKR for easy distinguish for kr and en locale
+
 export const projects: Project[] = [
     { 
         id: 1, 
