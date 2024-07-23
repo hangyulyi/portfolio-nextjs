@@ -40,5 +40,13 @@ export const projects: Project[] = [
         technologies: ["Web development", "Newsletter", "HTML/CSS", "JavaScript", "MJML"], 
         img: "https://hangyulyi.github.io/assets/bmerit_logo.png",
         code: false
+    },
+    {
+        id: 4,
+        name: "",
+        description: "",
+        slug: "",
+        technologies: [],
+        code: true
     }
 ]
