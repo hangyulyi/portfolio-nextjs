@@ -48,5 +48,13 @@ export const projects: Project[] = [
         slug: "",
         technologies: [],
         code: true
+    },
+    {
+        id: 5,
+        name: "",
+        description: "",
+        slug: "",
+        technologies: [],
+        code: true
     }
 ]
