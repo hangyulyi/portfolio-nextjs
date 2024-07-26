@@ -16,6 +16,9 @@
         "en": "영어",
         "label": "언어"
     },
+    "Typed": {
+        "home": "안녕하세요!"
+    },
     "Contact": {
         "name": "성함",
         "email": "이메일",
