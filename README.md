@@ -19,4 +19,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ## TODO: 
 - typewriter effect
 - Add projects
-- create contact me fill out form
+~~- create contact me fill out form~~
+- create homepage
