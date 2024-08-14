@@ -17,11 +17,11 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects }) => {
     return (
         <div className='grid gap-6 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid-cols-1'>
             {projects.map((project: Project) => (
-                <Link href={`/projects/${project.slug}`} key={project.id} passHref>
-                    <div className='w-full p-4 cursor-pointer'>
-                        <ProjectsCard project={project} />
-                    </div>
-                </Link>
+                
+                <div className='w-full p-2'>
+                    <ProjectsCard project={project} />
+                </div>
+                
             ))}
         </div>
     )
