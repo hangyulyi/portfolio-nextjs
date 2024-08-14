@@ -12,11 +12,13 @@ const ProjectsSearch: React.FC = () => {
         setSearchQuery(event.target.value);
     }
 
+    // able to search via name, technologies, and years
     const filteredProjects = searchQuery ? projects.filter((project) =>
         project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         project.technologies.some((tech) =>
             tech.toLowerCase().includes(searchQuery.toLowerCase())
-        )
+        ) ||
+        (project.year && project.year.toString().includes(searchQuery))
     )
     : projects
 

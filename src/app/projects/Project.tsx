@@ -1,7 +1,9 @@
 export interface Project {
     id: number;
     name: string;
+    year?: number; // year worked on
     description: string;
+    // slug: used for when projects have their own pages
     slug: string;
     technologies: string[];
     // code link
@@ -26,7 +28,8 @@ export const projects: Project[] = [
     { 
         id: 2, 
         name: "Flower Image Classifier", 
-        description: "Train and predict flower species using a command line application, displaying top-K probable results. \n Users are able to train a new network on a dataset and save the model as a checkpoint as well as use the trained network to predict the class when given an input image.", 
+        year: 2023,
+        description: "Train and predict flower species using a command line application, displaying top-K probable results. \n Users are able to train a new network on a dataset and save the model as a checkpoint as well as use the trained network to predict the class when given an input image. All of this is done possible through custom command-line commands coded using the argparse module. \n(If you're interesting on running this, there are a couple assumptions made in the codebase i.e. where your images lay so adjustments may be required)", 
         slug: "flower-classifier", 
         technologies: ["Machine Learning", "Python", "PyTorch"], 
         link: "https://github.com/hangyulyi/Image-Classifier",
@@ -35,7 +38,7 @@ export const projects: Project[] = [
     {
         id: 3, 
         name: "BMERIT Website & Newsletter", 
-        description: "Develop and deploy the main website for BMERIT at University of Calgary. \nI've also created and made a newsletter service for the club using MJML to create the responsive HTML and as of right now, I'm working on making an automated mailing system to make the emailing process smoother for the club's monthly newsletter.", 
+        description: "Developed and deployed the main website for BMERIT at University of Calgary. \nI've also created and made a newsletter service for the club using MJML to create the responsive HTML template and as of right now, I'm working on making an automated mailing system to make the emailing process smoother for the club's monthly newsletter.", 
         slug: "bmerit", 
         technologies: ["Web development", "Newsletter", "HTML/CSS", "JavaScript", "MJML"], 
         img: "https://hangyulyi.github.io/assets/bmerit_logo.png",
@@ -44,9 +47,13 @@ export const projects: Project[] = [
     {
         id: 4,
         name: "ottertype",
-        description: "",
-        slug: "",
-        technologies: []
+        year: 2024,
+        description: "A replica of my favorite typing test, MonkeyType.\n It's super barebones of what the original is so while it doesn't have the cool additional features like all the custom themes and colors, it does have an otter which is a bit cuter than a monkey in my opinion :].",
+        slug: "ottertype",
+        technologies: ["Web development", "Next.js", "TypeScript", "TailwindCSS"],
+        img: "https://hangyulyi.github.io/assets/ottertype.png",
+        link: "https://github.com/hangyulyi/ottertype",
+        live: "https://ottertype.vercel.app/"
     },
     {
         id: 5,

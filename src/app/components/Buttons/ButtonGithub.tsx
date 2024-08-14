@@ -11,7 +11,7 @@ const ButtonGithub:React.FC<ButtonGithubProps> = ({ link }) => {
             target="_blank"
             className="hover:text-gray-500"
         >
-            <FaGithub size={40}/>
+            <FaGithub size={30}/>
         </a>
     )
 }

@@ -13,7 +13,7 @@ const ButtonLive:React.FC<ButtonLiveProps> = ({ link }) => {
             target="_blank"
             className="hover:text-gray-500"
         >
-            <FaExternalLinkAlt size={40}/>
+            <FaExternalLinkAlt size={30}/>
         </a>
     )
 }

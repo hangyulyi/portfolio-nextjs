@@ -3,6 +3,7 @@ import React from "react";
 import { Project } from "@/app/projects/Project";
 
 import ButtonGithub from "../Buttons/ButtonGithub";
+import ButtonLive from "../Buttons/ButtonLive";
 
 interface ProjectsCardProps {
     project: Project;
@@ -21,15 +22,20 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({ project }) => {
                     className="rounded-lg max-h-48 object-contain" 
                 />
                 
-                <div className="flex justify-end mr-6 mb-2 mt-4">
-                    {/* if project link exists, create github link to it */}
+                <div className="flex justify-center mt-4 align-center space-x-4">
+                    {/* if project link/live exists, create button and a link to it */}
+                    {project.live && <ButtonLive link={project.live} />}
                     {project.link && <ButtonGithub link={project.link} />}
                 </div>    
             </div>
 
             {/* text blurb */}
             <div className="mx-6 flex-grow text-left mt-4">
-                <h2 className="text-xl font-bold mb-2">{project.name}</h2>
+                <div className="flex flex-nowrap">
+                    <h2 className="text-xl font-bold mb-2">{project.name}</h2>
+                    {project.year && <span className="italic ml-2 mt-1">{project.year}</span>}
+                </div>
+                
                 <div className="flex flex-col -space-y-2">
                         {project.description.split('\n').map((line, index) => (
                             <div key={index} className="sm:pt-0">
