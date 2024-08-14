@@ -2,6 +2,8 @@ import React from "react";
 
 import { Project } from "@/app/projects/Project";
 
+import ButtonGithub from "../Buttons/ButtonGithub";
+
 interface ProjectsCardProps {
     project: Project;
 }
@@ -9,14 +11,26 @@ interface ProjectsCardProps {
 
 
 const ProjectsCard: React.FC<ProjectsCardProps> = ({ project }) => {
+
     return (
         <div className="bg-white rounded-lg transition-all transform hover:translate-y-2 p-4 flex">
             <div className="flex-shrink-0">
-                <img src={project.img} alt={project.name} className="rounded-lg max-h-48 object-contain" />    
+                <img src={project.img} alt={project.name} className="rounded-lg max-h-48 object-contain" />
+                <div>
+                    {/* if project link exists, create github link to it */}
+                    {project.link && <ButtonGithub link={project.link} />}
+                </div>    
             </div>
-            <div className="ml-6 flex-grow text-left mt-4">
-                <h2 className="text-xl font-bold">{project.name}</h2>
-                <p>{project.description}</p>
+            <div className="mx-6 flex-grow text-left mt-4">
+                <h2 className="text-xl font-bold mb-2">{project.name}</h2>
+                <div className="flex flex-col space-y-0.5">
+                        {project.description.split('\n').map((line, index) => (
+                            <div key={index} className="sm:pt-0">
+                                <p>{line}</p>
+                                <br />
+                            </div>
+                        ))}
+                    </div>
                 <div className="mt-4 flex flex-wrap">
 
                     {/* display technologies as tags */}
