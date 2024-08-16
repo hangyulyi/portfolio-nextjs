@@ -29,7 +29,7 @@ export const projects: Project[] = [
         id: 2, 
         name: "Flower Image Classifier", 
         year: 2023,
-        description: "Train and predict flower species using a command line application, displaying top-K probable results. \n Users are able to train a new network on a dataset and save the model as a checkpoint as well as use the trained network to predict the class when given an input image. All of this is done possible through custom command-line commands coded using the argparse module. \n(If you're interesting on running this, there are a couple assumptions made in the codebase i.e. where your images lay so adjustments may be required)", 
+        description: "Train and predict flower species using a command line application, displaying top-K probable results. \n Users are able to train a new network on a dataset and save the model as a checkpoint as well as use the trained network to predict the class when given an input image. All of this is possible through custom command-line commands coded using the argparse module. \n(If you're interesting on running this, there are a couple assumptions made in the codebase i.e. where your images lay so adjustments may be required)", 
         slug: "flower-classifier", 
         technologies: ["Machine Learning", "Python", "PyTorch"], 
         link: "https://github.com/hangyulyi/Image-Classifier",
@@ -55,11 +55,11 @@ export const projects: Project[] = [
         link: "https://github.com/hangyulyi/ottertype",
         live: "https://ottertype.vercel.app/"
     },
-    {
-        id: 5,
-        name: "",
-        description: "",
-        slug: "",
-        technologies: []
-    }
+    // {
+    //     id: 5,
+    //     name: "",
+    //     description: "",
+    //     slug: "",
+    //     technologies: []
+    // }
 ]
