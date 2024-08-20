@@ -2,18 +2,23 @@ export interface MonitorBarItemProps {
     name: string;
     isHovered: boolean;
     scaleClass: string;
-    // background: string;
+    onClick: () => void;
+    background: string;
 }
 
-const MonitorBarItem: React.FC<MonitorBarItemProps> = ({ name, isHovered, scaleClass }) => {
+const MonitorBarItem: React.FC<MonitorBarItemProps> = ({ name, isHovered, scaleClass, onClick, background }) => {
     return(
-        <div className="relative">
+        <div className={`relative transition-transform rounded-[10px] ${scaleClass}`}
+            onClick={onClick}
+            style={{ cursor: 'pointer' }}
+        >
             <div 
-                className={`w-11 rounded-[10px] aspect-square bg-white transition-transform ${scaleClass}`}
+                className="w-11 aspect-square bg-cover bg-center"
+                style={{backgroundImage: `url(${background})` }}
             >
 
                 {isHovered && (
-                    <div className="absolute w-fit left-full ml-2 px-2 py-1 bg-gray-200 rounded">
+                    <div className="absolute left-full ml-3 px-2 py-1 bg-gray-200 rounded whitespace-nowrap">
                         {name}
                     </div>
                 )}

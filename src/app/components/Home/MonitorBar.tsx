@@ -6,6 +6,7 @@ import MonitorBarItem from "./MonitorBarItem";
 
 export default function MonitorBar() {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+    const [selectedPage, setSelectedPage] = useState<string | null>(null)
 
     const handleMouseEnter = (index: number) => {
         setHoveredIndex(index)
@@ -15,6 +16,17 @@ export default function MonitorBar() {
         setHoveredIndex(null)
     }
 
+    const handleItemClick = (name: string) => {
+        if (name === 'About me') {
+            setSelectedPage('AboutMePage')
+        } else if (name === 'My skills') {
+            setSelectedPage('MySkillsPage')
+        } else if (name === 'Github') {
+            window.open('https://www.github.com/hangyulyi', '_blank')
+        } else if (name === 'LinkedIn') {
+            window.open('https://www.linkedin.com/in/yihangyul/', '_blank')
+        }
+    }
 
     return(
         <div className="backdrop-blur-md flex items-center">
@@ -23,7 +35,13 @@ export default function MonitorBar() {
                 <div className="space-y-3">
 
                     {/* imitate behavior on macbook toolbar */}
-                    {['About me', 'My skills', 'Github', 'LinkedIn'].map((name, index) => {
+                    {[
+                        { name: 'About me', background: 'https://img.icons8.com/?size=100&id=3439&format=png&color=000000' },
+                        { name: 'My skills', background: 'https://img.icons8.com/?size=100&id=3439&format=png&color=000000' },
+                        { name: 'Github', background: 'https://img.icons8.com/ios-glyphs/30/000000/github.png' },
+                        { name: 'LinkedIn', background: 'https://img.icons8.com/?size=100&id=13930&format=png&color=000000' },
+
+                    ].map((item, index) => {
                         let scaleClass = 'scale-100';
                         if (hoveredIndex === index) {
                             scaleClass = 'scale-125'
@@ -38,9 +56,11 @@ export default function MonitorBar() {
                                 onMouseLeave={handleMouseLeave}
                             >
                                 <MonitorBarItem 
-                                    name={name}
+                                    name={item.name}
                                     scaleClass={scaleClass}
                                     isHovered={hoveredIndex === index}
+                                    onClick={() => handleItemClick(item.name)}
+                                    background={item.background}
                                 />
                             </div>
                         )
