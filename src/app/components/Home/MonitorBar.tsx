@@ -2,6 +2,10 @@
 
 import React, { useState } from "react";
 
+// toolbar items
+import { IoPerson } from "react-icons/io5";
+import { FaLaptopCode, FaLinkedin, FaGithubSquare } from "react-icons/fa";
+
 import MonitorBarItem from "./MonitorBarItem";
 
 export default function MonitorBar() {
@@ -36,10 +40,10 @@ export default function MonitorBar() {
 
                     {/* imitate behavior on macbook toolbar */}
                     {[
-                        { name: 'About me', background: 'https://img.icons8.com/?size=100&id=3439&format=png&color=000000' },
-                        { name: 'My skills', background: 'https://img.icons8.com/?size=100&id=3439&format=png&color=000000' },
-                        { name: 'Github', background: 'https://img.icons8.com/ios-glyphs/30/000000/github.png' },
-                        { name: 'LinkedIn', background: 'https://img.icons8.com/?size=100&id=13930&format=png&color=000000' },
+                        { name: 'About me', Icon: IoPerson, color: '#1e3a8a' },
+                        { name: 'My skills', Icon: FaLaptopCode, color: '#334155' },
+                        { name: 'Github', Icon: FaGithubSquare },
+                        { name: 'LinkedIn', Icon: FaLinkedin, color: '#0077B5' },
 
                     ].map((item, index) => {
                         let scaleClass = 'scale-100';
@@ -57,10 +61,11 @@ export default function MonitorBar() {
                             >
                                 <MonitorBarItem 
                                     name={item.name}
+                                    Icon={item.Icon}
+                                    color={item.color}
                                     scaleClass={scaleClass}
                                     isHovered={hoveredIndex === index}
                                     onClick={() => handleItemClick(item.name)}
-                                    background={item.background}
                                 />
                             </div>
                         )

@@ -1,28 +1,31 @@
+import { IconType } from "react-icons";
+
 export interface MonitorBarItemProps {
     name: string;
     isHovered: boolean;
     scaleClass: string;
     onClick: () => void;
-    background: string;
+    Icon: IconType;
+    color?: string;
 }
 
-const MonitorBarItem: React.FC<MonitorBarItemProps> = ({ name, isHovered, scaleClass, onClick, background }) => {
+const MonitorBarItem: React.FC<MonitorBarItemProps> = ({ name, isHovered, scaleClass, onClick, Icon, color='black' }) => {
     return(
-        <div className={`relative transition-transform rounded-[10px] ${scaleClass}`}
+        <div className={`relative w-11 h-11 transition-transform aspect-square flex items-center justify-center ${scaleClass}`}
             onClick={onClick}
             style={{ cursor: 'pointer' }}
         >
-            <div 
-                className="w-11 aspect-square bg-cover bg-center"
-                style={{backgroundImage: `url(${background})` }}
-            >
+            <div className="bg-white rounded-md w-full h-full">
+                <Icon size='100%' color={color} />
+            </div>
+            
 
                 {isHovered && (
                     <div className="absolute left-full ml-3 px-2 py-1 bg-gray-200 rounded whitespace-nowrap">
                         {name}
                     </div>
                 )}
-            </div>
+            
         </div>
     )
 }
