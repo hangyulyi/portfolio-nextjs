@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState } from "react";
 
 // toolbar items
@@ -8,7 +6,11 @@ import { FaLaptopCode, FaLinkedin, FaGithubSquare } from "react-icons/fa";
 
 import MonitorBarItem from "./MonitorBarItem";
 
-export default function MonitorBar() {
+interface MonitorBarProps {
+    onItemClick: (name: string) => void;
+}
+
+const MonitorBar: React.FC<MonitorBarProps> = ({ onItemClick }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
     const [selectedPage, setSelectedPage] = useState<string | null>(null)
 
@@ -18,18 +20,6 @@ export default function MonitorBar() {
 
     const handleMouseLeave = () => {
         setHoveredIndex(null)
-    }
-
-    const handleItemClick = (name: string) => {
-        if (name === 'About me') {
-            setSelectedPage('AboutMePage')
-        } else if (name === 'My skills') {
-            setSelectedPage('MySkillsPage')
-        } else if (name === 'Github') {
-            window.open('https://www.github.com/hangyulyi', '_blank')
-        } else if (name === 'LinkedIn') {
-            window.open('https://www.linkedin.com/in/yihangyul/', '_blank')
-        }
     }
 
     return(
@@ -65,7 +55,7 @@ export default function MonitorBar() {
                                     color={item.color}
                                     scaleClass={scaleClass}
                                     isHovered={hoveredIndex === index}
-                                    onClick={() => handleItemClick(item.name)}
+                                    onClick={() => onItemClick(item.name)}
                                 />
                             </div>
                         )
@@ -76,3 +66,5 @@ export default function MonitorBar() {
         </div>
     )
 }
+
+export default MonitorBar;
