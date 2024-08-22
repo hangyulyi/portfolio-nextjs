@@ -25,13 +25,11 @@ export default function Monitor () {
 
     return(
         
-        <div className="flex justify-center p-4">
+        <div className="flex justify-center items-center pt-4">
             <div className="w-screen max-w-7xl aspect-video bg-[url('/img/wallpaper.jpg')] bg-cover rounded-lg md:w-10/12">
 
-                <div className="p-2 flex">
-                    <div className="w-1/4">
-                        <MonitorBar onItemClick={handleItemClick} />
-                    </div>
+                <div className="p-2 flex items-center justify-center h-full">
+                    <MonitorBar onItemClick={handleItemClick} />
 
                     <div className="flex-grow flex items-center justify-center">
                         {/* handle selected page views */}
