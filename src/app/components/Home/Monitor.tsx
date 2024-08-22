@@ -31,9 +31,13 @@ export default function Monitor () {
                 <div className="p-2 flex items-center justify-center h-full">
                     <MonitorBar onItemClick={handleItemClick} />
 
-                    <div className="flex-grow flex items-center justify-center">
+                    <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
                         {/* handle selected page views */}
-                        {selectedPage === 'MySkillsPage' && <MySkillsPage />}
+                        {selectedPage === 'MySkillsPage' && (
+                            <div className="w-4/5">
+                                <MySkillsPage />
+                            </div>
+                        )}
                         {selectedPage === 'AboutMePage' && <AboutMePage />}
 
                     </div>
