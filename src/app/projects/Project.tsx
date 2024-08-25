@@ -23,7 +23,7 @@ export const projects: Project[] = [
         slug: "portfolio", 
         technologies: ["Web development", "Next.js", "TailwindCSS", "TypeScript"], 
         link: "https://github.com/hangyulyi/portfolio-nextjs",
-        img: "https://hangyulyi.github.io/assets/flower_classifier.png"
+        img: "/project-img/portfolio.png"
     },
     { 
         id: 2, 
