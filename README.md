@@ -1,7 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 This is my portfolio website using the Next.js framework to create a more interactive and responsive website.
-Works in completing a total bilingual website in both English and Korean are in the works, English version of the site should be 100% working, works on getting the Korean version of the site is in the works.
+
+Efforts in completing a total bilingual website in both English and Korean are in the works, English version of the site should be 100% working, getting the Korean version of the site is in the works.
 
 Users are able to contact me by filling out the contact form in the contact page via email using the nodemailer module.
 
@@ -18,6 +19,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## TODO: 
 - typewriter effect
-- Add projects
+~~- Add projects~~
 ~~- create contact me fill out form~~
 - create homepage
