@@ -36,9 +36,12 @@ export default function AboutMePage() {
                     <h2 className="text-green font-bold text-2xl">About me</h2>
                     <h3 className="font-bold">Software Engineering Student</h3>
 
-                    <p className="pt-6">Greetings! I'm a Software Engineering student attending the University of Calgary.</p> <br></br>
-                    <p>I like to build things and hope they work, one of them being this page!</p> <br></br>
-                    <p></p>
+                    <div className="pr-10">
+                        <p className="pt-6">Greetings! I'm a Software Engineering student attending the University of Calgary.</p> <br></br>
+                        <p>I like to build things and hope they work, one of them being this page!</p> <br></br>
+                        <p>I love working on projects and improving my skills not only in class but outside as well. My current project I'm working on is Barry, a chatbot that I'm trying to teach. If I've been able to get it to have satisfactory results, you'll be able to check it out on this site! If you don't see it, it means it's still in the works.</p> <br></br>
+                        <p>Feel free to check out my other projects in the Projects section though!</p>
+                    </div>
                 </div>
             </div>
         </div>
