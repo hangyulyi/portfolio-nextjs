@@ -5,6 +5,7 @@ import { VscChromeMinimize } from "react-icons/vsc";
 import { IoIosResize } from "react-icons/io";
 
 export default function AboutMePage() {
+    // TODO: add functunatity for the buttons to close, fullsize, minize as indicated
     return (
         <div className="aspect-[3/2] bg-white w-full h-full rounded-lg mx-10 overflow-hidden relative">
             {/* top styling */}
@@ -16,18 +17,29 @@ export default function AboutMePage() {
                 </div>
             </div>
 
-            <div className="mt-7 p-4">
-                <Image 
-                    src="/img/aboutmeimg.png"
-                    sizes="100vw"
-                    style={{
-                        width: '20%',
-                        height: 'auto',
-                    }}
-                    width={100}
-                    height={100}
-                    alt="about me graphic"
-                />
+
+
+            <div className="flex items-start mt-8 p-6">
+
+                <div className="mr-4">
+                    <Image 
+                        src="/img/aboutmeimg.png"
+                        sizes="100vw"
+                        className="w-40 h-auto animate-floating"
+                        width={100}
+                        height={100}
+                        alt="about me graphic"
+                    />
+                </div>
+
+                <div className="flex-1">
+                    <h2 className="text-green font-bold text-2xl">About me</h2>
+                    <h3 className="font-bold">Software Engineering Student</h3>
+
+                    <p className="pt-6">Greetings! I'm a Software Engineering student attending the University of Calgary.</p> <br></br>
+                    <p>I like to build things and hope they work, one of them being this page!</p> <br></br>
+                    <p></p>
+                </div>
             </div>
         </div>
     )

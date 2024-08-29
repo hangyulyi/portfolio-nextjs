@@ -34,12 +34,12 @@ export default function Monitor () {
                     <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
                         {/* handle selected page views */}
                         {selectedPage === 'MySkillsPage' && (
-                            <div className="w-4/5 -z-1">
+                            <div className="w-4/5 -z-2">
                                 <MySkillsPage />
                             </div>
                         )}
                         {selectedPage === 'AboutMePage' && (
-                            <div className="-z-1 w-5/6">
+                            <div className="-z-2 w-5/6">
                                 <AboutMePage />
                             </div>
                         )}

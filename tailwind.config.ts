@@ -23,7 +23,16 @@ const config: Config = {
         bold_r_md: "7px 7px",
         bold_l: "-10px 10px",
         zero: "0px 0px",
-      }
+      },
+      keyframes: {
+        floating: {
+          '0%, 100%': { transform: 'translate(0, 0px)' },
+          '50%': { transform: 'translate(0, 15px)' },
+        }
+      },
+      animation: {
+        floating: 'floating 3s ease-in-out infinite' 
+      },
     },
   },
   plugins: [],
