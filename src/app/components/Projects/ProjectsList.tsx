@@ -18,7 +18,7 @@ const ProjectsList: React.FC<ProjectsListProps> = ({ projects }) => {
         <div className='grid gap-6 max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto grid-cols-1'>
             {projects.map((project: Project) => (
                 
-                <div className='w-full p-2'>
+                <div key={project.id} className='w-full p-2'>
                     <ProjectsCard project={project} />
                 </div>
                 

@@ -40,6 +40,8 @@ export default function LocaleSwitcher() {
         <Image  
             src={currentIconSrc} 
             alt={currentLocale === 'en' ? 'US Flag' : 'KR Flag'} 
+            width={50}
+            height={50}
             className='w-8 h-6 rounded-md' />
       </button>
     </div>

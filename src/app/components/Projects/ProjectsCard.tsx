@@ -17,9 +17,11 @@ const ProjectsCard: React.FC<ProjectsCardProps> = ({ project }) => {
     return (
         <div className="bg-white rounded-lg transition-all transform hover:-translate-y-4 p-4 flex">
             <div className="flex-shrink-0">
-                <img 
+                <Image 
                     src={project.img} 
                     alt={project.name} 
+                    width={400}
+                    height={300}
                     className="rounded-lg max-h-48 object-contain" 
                 />
                 
