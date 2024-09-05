@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useTransition } from 'react';
+import Image from 'next/image'
 import { useLocale, useTranslations } from 'next-intl';
 import { setUserLocale } from '@/services/locale';
 import { Locale } from '@/config';
@@ -36,7 +37,7 @@ export default function LocaleSwitcher() {
         onClick={handleClick}
         className={`transition-transform transform hover:translate-y-[2px] hover:shadow-lg rounded-md ${isPending ? 'pointer-events-none opacity-60' : ''}`}
       >
-        <img 
+        <Image  
             src={currentIconSrc} 
             alt={currentLocale === 'en' ? 'US Flag' : 'KR Flag'} 
             className='w-8 h-6 rounded-md' />

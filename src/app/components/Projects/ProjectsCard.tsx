@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 import { Project } from "@/app/projects/Project";
 
