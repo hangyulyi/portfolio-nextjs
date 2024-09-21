@@ -17,7 +17,7 @@ Users are able to contact me by filling out the contact form in the contact page
 
 ## Deploy on Vercel
 
-[`hangyulyi.vercel.app`](https://hangyulyi.vercel.app)
+[`hangyulyi.com`](https://hangyulyi.com)
 
 
 ## TODO: 
