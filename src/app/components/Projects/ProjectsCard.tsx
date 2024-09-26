@@ -15,8 +15,8 @@ interface ProjectsCardProps {
 const ProjectsCard: React.FC<ProjectsCardProps> = ({ project }) => {
 
     return (
-        <div className="bg-white rounded-lg transition-all transform hover:-translate-y-4 p-4 flex">
-            <div className="flex-shrink-0">
+        <div className="bg-white rounded-lg transition-all transform hover:-translate-y-4 p-4 flex flex-col md:flex-row">
+            <div className="flex-shrink-0 mx-auto">
                 <Image 
                     src={project.img} 
                     alt={project.name} 

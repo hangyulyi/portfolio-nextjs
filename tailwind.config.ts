@@ -10,9 +10,11 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        
         'off-white': '#f2f0ef',
         'exwhite': 'e9e3d5',
-        'green': '#0a7273',
+        // 'green': '#0a7273',
+        'green': '#0a3e73',
         'yellow': '#fda521',
         'midnight': '#033043',
       },
