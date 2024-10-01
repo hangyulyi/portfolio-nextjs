@@ -20,6 +20,8 @@ export default function Monitor () {
             window.open('https://www.github.com/hangyulyi', '_blank')
         } else if (name === 'LinkedIn') {
             window.open('https://www.linkedin.com/in/yihangyul/', '_blank')
+        } else if (name === 'Resume') {
+            window.open('/assets/HangyulYi-Resume.pdf', '_blank')
         }
     }
 

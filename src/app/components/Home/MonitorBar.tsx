@@ -3,6 +3,7 @@ import React, { useState } from "react";
 // toolbar items
 import { IoPerson } from "react-icons/io5";
 import { FaLaptopCode, FaLinkedin, FaGithubSquare } from "react-icons/fa";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 import MonitorBarItem from "./MonitorBarItem";
 
@@ -34,13 +35,12 @@ const MonitorBar: React.FC<MonitorBarProps> = ({ onItemClick }) => {
                         { name: 'My skills', Icon: FaLaptopCode, color: '#334155' },
                         { name: 'Github', Icon: FaGithubSquare },
                         { name: 'LinkedIn', Icon: FaLinkedin, color: '#0077B5' },
+                        { name: 'Resume', Icon: MdOutlineFileDownload },
 
                     ].map((item, index) => {
                         let scaleClass = 'scale-100';
                         if (hoveredIndex === index) {
                             scaleClass = 'scale-125'
-                        } else if (hoveredIndex === index - 1 || hoveredIndex === index + 1) {
-                            scaleClass = 'scale-105'
                         }
 
                         return (
