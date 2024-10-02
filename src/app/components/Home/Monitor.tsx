@@ -9,9 +9,11 @@ import AboutMePage from "./AboutMePage"
 export default function Monitor () {
 
     const [selectedPage, setSelectedPage] = useState<string | null>(null)
+    const [isVisible, setIsVisible] = useState(false)
 
     // handle monitorbaritem clicks
     const handleItemClick = (name: string) => {
+        setIsVisible(true)
         if (name === 'About me') {
             setSelectedPage('AboutMePage')
         } else if (name === 'My skills') {
@@ -25,6 +27,11 @@ export default function Monitor () {
         }
     }
 
+    // handle clicks on x or minimize
+    const handleClose = () => {
+        setIsVisible(false)
+    }
+
     return(
         
         <div className="flex justify-center items-center pt-4">
@@ -35,14 +42,14 @@ export default function Monitor () {
 
                     <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
                         {/* handle selected page views */}
-                        {selectedPage === 'MySkillsPage' && (
+                        {isVisible && selectedPage === 'MySkillsPage' && (
                             <div className="w-4/5 -z-2">
-                                <MySkillsPage />
+                                <MySkillsPage onClose={handleClose} />
                             </div>
                         )}
-                        {selectedPage === 'AboutMePage' && (
+                        {isVisible && selectedPage === 'AboutMePage' && (
                             <div className="-z-2 w-5/6">
-                                <AboutMePage />
+                                <AboutMePage onClose={handleClose} />
                             </div>
                         )}
 

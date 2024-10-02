@@ -3,23 +3,39 @@ import Image from "next/image";
 import { IoIosClose } from "react-icons/io";
 import { VscChromeMinimize } from "react-icons/vsc";
 import { IoIosResize } from "react-icons/io";
+import { useState } from "react";
 
-export default function AboutMePage() {
+interface AboutMePageProps {
+    onClose: () => void;
+}
+
+export default function AboutMePage({ onClose }: AboutMePageProps) {
     // TODO: add functunatity for the buttons to close, fullsize, minize as indicated
+
     return (
         <div className="aspect-[3/2] bg-white w-full h-full rounded-lg mx-10 overflow-hidden relative">
             {/* top styling */}
             <div className="bg-gray-800 absolute inset-x-0 top-0 h-7">
                 <div className="absolute inset-y-0 left-0 px-2 flex items-center space-x-1">
-                    <IoIosClose color="#450a0a" className="rounded-full bg-red-600" size={12} />
-                    <VscChromeMinimize color="#a16207" className="rounded-full bg-amber-400" size={12} />
+                    <IoIosClose 
+                        color="#450a0a" 
+                        className="rounded-full bg-red-600" 
+                        size={12} 
+                        onClick={onClose} 
+                    />
+                    <VscChromeMinimize 
+                        color="#a16207"
+                        className="rounded-full bg-amber-400" 
+                        size={12}
+                        onClick={onClose}    
+                    />
                     <IoIosResize color="#052e16" className="rounded-full bg-emerald-500" size={12} />
                 </div>
             </div>
 
 
 
-            <div className="flex items-start mt-8 p-6">
+            <div className="flex items-start mt-8 p-6 overflow-y-scroll h-full">
 
                 <div className="mr-4">
                     <Image 
@@ -40,7 +56,8 @@ export default function AboutMePage() {
                         <p className="pt-6">Greetings! I'm a Software Engineering student attending the University of Calgary.</p> <br></br>
                         <p>I like to build things and hope they work, one of them being this page!</p> <br></br>
                         <p>I love working on projects and improving my skills not only in class but outside as well. My current project I'm working on is Barry, a chatbot that I'm trying to teach. If I've been able to get it to have satisfactory results, you'll be able to check it out on this site! If you don't see it, it means it's still in the works.</p> <br></br>
-                        <p>Feel free to check out my other projects in the Projects section though!</p>
+                        <p>My other interests are currently in web development as I've been helping a lot of school clubs maintain and develop their website using frameworks such as the traditional HTML/CSS, JS or something more modern like Node.js and React.</p> <br></br>
+                        <p className="pb-6">Feel free to check out my other projects in the Projects section though!</p>
                     </div>
                 </div>
             </div>
