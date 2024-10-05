@@ -21,7 +21,7 @@ Users are able to contact me by filling out the contact form in the contact page
 
 
 ## TODO: 
-- typewriter effect
 ~~- Add projects~~
 ~~- create contact me fill out form~~
-- create homepage
+~~- create homepage~~
+- Implement search/pagination for projects search query and skills icon click (URL search parameters instead of client state)
