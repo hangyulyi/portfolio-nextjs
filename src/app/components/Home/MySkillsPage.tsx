@@ -37,7 +37,18 @@ export default function MySkillsPage({ onClose }: MySkillsPageProps) {
 
             {/* click framework, input that framework into projects search bar to display all projects that used it */}
             <div>
-
+                <div className="w-12 h-12">
+                    <FaHtml5 />
+                    <FaCss3 />
+                    <FaJava />
+                    <FaReact />
+                    <FaNode />
+                    <IoLogoJavascript />
+                    <TbBrandCpp />
+                    <TbBrandTypescript />
+                    <SiArduino />
+                    <RiFlutterFill />
+                </div>
             </div>
 
         </div>
