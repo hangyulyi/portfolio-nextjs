@@ -14,6 +14,9 @@ interface MySkillsPageProps {
 }
 
 export default function MySkillsPage({ onClose }: MySkillsPageProps) {
+    const iconSize = 50;
+
+    // TODO: Handle icons here and map them out instead
     return(
         
         <div className="aspect-[3/2] bg-white w-full h-full rounded-lg mx-10 overflow-hidden relative">
@@ -36,18 +39,18 @@ export default function MySkillsPage({ onClose }: MySkillsPageProps) {
             </div>
 
             {/* click framework, input that framework into projects search bar to display all projects that used it */}
-            <div>
-                <div className="w-12 h-12">
-                    <FaHtml5 />
-                    <FaCss3 />
-                    <FaJava />
-                    <FaReact />
-                    <FaNode />
-                    <IoLogoJavascript />
-                    <TbBrandCpp />
-                    <TbBrandTypescript />
-                    <SiArduino />
-                    <RiFlutterFill />
+            <div className="mt-10">
+                <div className="flex space-x-4 justify-center items-center align-center">
+                    <FaHtml5 size={iconSize} />
+                    <FaCss3 size={iconSize} />
+                    <FaJava size={iconSize} />
+                    <FaReact size={iconSize} />
+                    <FaNode size={iconSize} />
+                    <IoLogoJavascript size={iconSize} />
+                    <TbBrandCpp size={iconSize} />
+                    <TbBrandTypescript size={iconSize} />
+                    <SiArduino size={iconSize} />
+                    <RiFlutterFill size={iconSize} />
                 </div>
             </div>
 

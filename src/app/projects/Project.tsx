@@ -5,6 +5,7 @@ import bmerit from "../../../public/project-img/bmerit_logo.png"
 import flower_classifier from "../../../public/project-img/flower_classifier.png"
 import ottertype from "../../../public/project-img/ottertype.png"
 import portfolio from "../../../public/project-img/portfolio.png"
+import vms from "../../../public/project-img/vms.png"
 
 export interface Project {
     id: number;
@@ -63,11 +64,14 @@ export const projects: Project[] = [
         link: "https://github.com/hangyulyi/ottertype",
         live: "https://ottertype.vercel.app/"
     },
-    // {
-    //     id: 5,
-    //     name: "",
-    //     description: "",
-    //     slug: "",
-    //     technologies: []
-    // }
+    {
+        id: 5,
+        name: "Victim Management System",
+        description: "Final project for Object-Oriented Principles for Software Development,\n Showcasing understanding of object-oriented design, testing, documentation by designing UML diagrams, creating test cases, and providing user documentation.",
+        year: 2024,
+        slug: "vms",
+        technologies: ["Java", "JUnit", "SQL"],
+        img: vms,
+        link: "https://github.com/hangyulyi/ENSF380IA/"
+    },
 ]
