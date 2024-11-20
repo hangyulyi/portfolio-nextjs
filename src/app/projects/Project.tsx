@@ -1,11 +1,12 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
-// image files
+// image files TODO: probably host them elsewhere and call them
 import bmerit from "../../../public/project-img/bmerit_logo.png"
 import flower_classifier from "../../../public/project-img/flower_classifier.png"
 import ottertype from "../../../public/project-img/ottertype.png"
 import portfolio from "../../../public/project-img/portfolio.png"
 import vms from "../../../public/project-img/vms.png"
+import biomod from "../../../public/project-img/biomod-logo.jpeg"
 
 export interface Project {
     id: number;
@@ -24,7 +25,19 @@ export interface Project {
 
 // for future implementation, create projectsEN and projectsKR for easy distinguish for kr and en locale
 
+// curr: 6
 export const projects: Project[] = [
+    {
+        id: 6,
+        name: "BIOMOD 2024 Wiki",
+        year: 2024,
+        description: "Assisted the BIOMOD team at BMERIT with their wiki page by creating unique interactive components such as an animated side navigation bar, the ability to view .pdb files in the browser using 3Dmol.js, image carousel, and more.",
+        slug: 'biomod-wiki',
+        technologies: ["Web development", "Node.js", "Express.js", "JavaScript"],
+        link: "https://github.com/meagan-davies/UCalgary-BIOMOD-2024-Wiki",
+        img: biomod,
+        live: "https://ucalgary-biomod-2024-wiki.onrender.com/"
+    },
     { 
         id: 1, 
         name: "Portfolio Website", 

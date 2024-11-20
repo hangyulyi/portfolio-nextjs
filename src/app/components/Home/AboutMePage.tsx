@@ -7,9 +7,10 @@ import { useState } from "react";
 
 interface AboutMePageProps {
     onClose: () => void;
+    onMinimize: () => void;
 }
 
-export default function AboutMePage({ onClose }: AboutMePageProps) {
+export default function AboutMePage({ onClose, onMinimize }: AboutMePageProps) {
     // TODO: add functunatity for the buttons to close, fullsize, minize as indicated
 
     return (
@@ -27,7 +28,7 @@ export default function AboutMePage({ onClose }: AboutMePageProps) {
                         color="#a16207"
                         className="rounded-full bg-amber-400" 
                         size={12}
-                        onClick={onClose}    
+                        onClick={onMinimize}    
                     />
                     <IoIosResize color="#052e16" className="rounded-full bg-emerald-500" size={12} />
                 </div>

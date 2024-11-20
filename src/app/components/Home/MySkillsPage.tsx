@@ -11,9 +11,10 @@ import { RiFlutterFill } from "react-icons/ri";
 
 interface MySkillsPageProps {
     onClose: () => void;
+    onMinimize: () => void;
 }
 
-export default function MySkillsPage({ onClose }: MySkillsPageProps) {
+export default function MySkillsPage({ onClose, onMinimize }: MySkillsPageProps) {
     const iconSize = 50;
 
     // TODO: Handle icons here and map them out instead
@@ -32,7 +33,7 @@ export default function MySkillsPage({ onClose }: MySkillsPageProps) {
                         color="#a16207" 
                         className="rounded-full bg-amber-400" 
                         size={12} 
-                        onClick={onClose}    
+                        onClick={onMinimize}    
                     />
                     <IoIosResize color="#052e16" className="rounded-full bg-emerald-500" size={12} />
                 </div>

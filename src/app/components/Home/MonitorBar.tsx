@@ -9,11 +9,11 @@ import MonitorBarItem from "./MonitorBarItem";
 
 interface MonitorBarProps {
     onItemClick: (name: string) => void;
+    minimizedPage: string | null;
 }
 
-const MonitorBar: React.FC<MonitorBarProps> = ({ onItemClick }) => {
+const MonitorBar: React.FC<MonitorBarProps> = ({ onItemClick, minimizedPage }) => {
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
-    const [selectedPage, setSelectedPage] = useState<string | null>(null)
 
     const handleMouseEnter = (index: number) => {
         setHoveredIndex(index)
@@ -48,6 +48,7 @@ const MonitorBar: React.FC<MonitorBarProps> = ({ onItemClick }) => {
                                 key={index}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={handleMouseLeave}
+                                className="relative"
                             >
                                 <MonitorBarItem 
                                     name={item.name}
@@ -56,6 +57,7 @@ const MonitorBar: React.FC<MonitorBarProps> = ({ onItemClick }) => {
                                     scaleClass={scaleClass}
                                     isHovered={hoveredIndex === index}
                                     onClick={() => onItemClick(item.name)}
+                                    isMinimized={minimizedPage === item.name}
                                 />
                             </div>
                         )

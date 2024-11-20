@@ -10,10 +10,12 @@ export default function Monitor () {
 
     const [selectedPage, setSelectedPage] = useState<string | null>(null)
     const [isVisible, setIsVisible] = useState(false)
+    const [minimizedPage, setMinimizedPage] = useState<string | null>(null)
 
     // handle monitorbaritem clicks
     const handleItemClick = (name: string) => {
         setIsVisible(true)
+        setMinimizedPage(null)
         if (name === 'About me') {
             setSelectedPage('AboutMePage')
         } else if (name === 'My skills') {
@@ -27,9 +29,17 @@ export default function Monitor () {
         }
     }
 
-    // handle clicks on x or minimize
+    // handle clicks on x, ensure minimized is no more
     const handleClose = () => {
         setIsVisible(false)
+        setSelectedPage(null)
+        setMinimizedPage(null)
+    }
+
+    const handleMinimize = () => {
+        setIsVisible(false)
+        setMinimizedPage(selectedPage)
+        console.log(`minimizing ${selectedPage}`)
     }
 
     return(
@@ -38,18 +48,18 @@ export default function Monitor () {
             <div className="w-screen max-w-7xl aspect-video bg-[url('/img/wallpaper.jpg')] bg-cover rounded-lg md:w-10/12">
 
                 <div className="p-2 flex items-center justify-center h-full">
-                    <MonitorBar onItemClick={handleItemClick} />
+                    <MonitorBar onItemClick={handleItemClick} minimizedPage={minimizedPage} />
 
                     <div className="flex-grow flex items-center justify-center h-full overflow-hidden">
                         {/* handle selected page views */}
                         {isVisible && selectedPage === 'MySkillsPage' && (
                             <div className="w-4/5 -z-2">
-                                <MySkillsPage onClose={handleClose} />
+                                <MySkillsPage onClose={handleClose} onMinimize={handleMinimize} />
                             </div>
                         )}
                         {isVisible && selectedPage === 'AboutMePage' && (
                             <div className="-z-2 w-5/6">
-                                <AboutMePage onClose={handleClose} />
+                                <AboutMePage onClose={handleClose} onMinimize={handleMinimize} />
                             </div>
                         )}
 
