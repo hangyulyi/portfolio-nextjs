@@ -8,6 +8,9 @@ import { IoLogoJavascript } from "react-icons/io5";
 import { TbBrandCpp, TbBrandTypescript } from "react-icons/tb";
 import { SiArduino } from "react-icons/si";
 import { RiFlutterFill } from "react-icons/ri";
+import { FaPython } from "react-icons/fa";
+import { RiNextjsFill } from "react-icons/ri";
+import { FaFigma } from "react-icons/fa";
 
 interface MySkillsPageProps {
     onClose: () => void;
@@ -40,19 +43,43 @@ export default function MySkillsPage({ onClose, onMinimize }: MySkillsPageProps)
             </div>
 
             {/* click framework, input that framework into projects search bar to display all projects that used it */}
+            {/* Add in a hover effect to display maybe familiarity with language and show ^^ */}
             <div className="mt-10">
-                <div className="flex space-x-4 justify-center items-center align-center">
-                    <FaHtml5 size={iconSize} />
-                    <FaCss3 size={iconSize} />
-                    <FaJava size={iconSize} />
-                    <FaReact size={iconSize} />
-                    <FaNode size={iconSize} />
-                    <IoLogoJavascript size={iconSize} />
-                    <TbBrandCpp size={iconSize} />
-                    <TbBrandTypescript size={iconSize} />
-                    <SiArduino size={iconSize} />
-                    <RiFlutterFill size={iconSize} />
+                <div className="mx-10">
+                    <h2 className="text-green font-bold text-2xl">Skilled in: </h2>
                 </div>
+
+                <div className="mx-10 my-5">
+                    <div className="flex space-x-4 items-center">
+                        <h2 className="font-bold">Languages</h2>
+                        <FaPython size={iconSize} className="icon-hover" />
+                        <TbBrandCpp size={iconSize} className="icon-hover" />
+                        <IoLogoJavascript size={iconSize} className="icon-hover" />
+                        <FaJava size={iconSize} className="icon-hover" />
+                        <TbBrandTypescript size={iconSize} className="icon-hover" />
+                    </div>
+                </div>
+
+                <div className="mx-10 my-5">
+                    <div className="flex space-x-4 items-center">
+                        <h2 className="font-bold">Web development</h2>
+                        <FaHtml5 size={iconSize} className="icon-hover" />
+                        <FaCss3 size={iconSize} className="icon-hover" />
+                        <RiNextjsFill size={iconSize} className="icon-hover" />
+                        <FaReact size={iconSize} className="icon-hover" />
+                        <FaNode size={iconSize} className="icon-hover" />
+                    </div>
+                </div>
+
+                <div className="mx-10 my-5">
+                    <div className="flex space-x-4 items-center">
+                        <h2 className="font-bold">Other technologies</h2>
+                        <SiArduino size={iconSize} className="icon-hover" />
+                        <RiFlutterFill size={iconSize} className="icon-hover" />
+                        <FaFigma size={iconSize} className="icon-hover" />
+                    </div>
+                </div>
+
             </div>
 
         </div>
