@@ -6,9 +6,9 @@ Efforts in completing a total bilingual website in both English and Korean are i
 
 Users are able to contact me by filling out the contact form in the contact page via email using the nodemailer module.
 
-## Tools used
-- next-intl
-- nodemailer
+## Libraries used
+- next-intl (for different language support EN, KR)
+- nodemailer (managing contact)
 
 ## Technologies used
 - Next.js
@@ -21,7 +21,8 @@ Users are able to contact me by filling out the contact form in the contact page
 
 
 ## TODO: 
-~~- Add projects~~
-~~- create contact me fill out form~~
-~~- create homepage~~
+-~~- Add projects~~
+-~~- create contact me fill out form~~
+-~~- create homepage~~
 - Implement search/pagination for projects search query and skills icon click (URL search parameters instead of client state)
+- Responsive homepage implementation
