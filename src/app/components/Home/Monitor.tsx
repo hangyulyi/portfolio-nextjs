@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import MonitorBar from "./MonitorBar"
 import MySkillsPage from "./MySkillsPage"
@@ -11,6 +11,11 @@ export default function Monitor () {
     const [selectedPage, setSelectedPage] = useState<string | null>(null)
     const [isVisible, setIsVisible] = useState(false)
     const [minimizedPage, setMinimizedPage] = useState<string | null>(null)
+
+    useEffect(() => {
+        setIsVisible(true)
+        setSelectedPage('AboutMePage')
+    },[])
 
     // handle monitorbaritem clicks
     const handleItemClick = (name: string) => {
@@ -25,7 +30,7 @@ export default function Monitor () {
         } else if (name === 'LinkedIn') {
             window.open('https://www.linkedin.com/in/yihangyul/', '_blank')
         } else if (name === 'Resume') {
-            window.open('/assets/Hangyul-Yi_Resume.pdf', '_blank')
+            window.open('/assets/Hangyul-Yi_Resume(2025).pdf', '_blank')
         }
     }
 
