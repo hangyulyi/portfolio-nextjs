@@ -14,7 +14,8 @@ const config: Config = {
         'off-white': '#f2f0ef',
         'exwhite': 'e9e3d5',
         // 'green': '#0a7273',
-        'green': '#0a3e73',
+        // 'green': '#0a3e73',
+        'green' : '#007bff',
         'yellow': '#fda521',
         'midnight': '#033043',
       },
@@ -35,6 +36,10 @@ const config: Config = {
       animation: {
         floating: 'floating 3s ease-in-out infinite' 
       },
+      fontFamily: {
+        cutepixel: ['CutePixel', 'sans-serif'],
+        neodgm: ['neodgm', 'sans-serif'],
+      }
     },
   },
   plugins: [],

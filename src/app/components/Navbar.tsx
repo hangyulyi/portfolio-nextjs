@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <nav className="sticky top-0 z-50 bg-off-white">
             <div className="container mx-auto flex items-center justify-between p-4">
-                <div className="flex-grow flex justify-center items-center space-x-12 text-lg">
+                <div className="flex-grow flex justify-center items-center space-x-12 tracking-wider">
                     <NavLink href="/">{n('home')}</NavLink>
                     <NavLink href="/projects">{n('projects')}</NavLink>
                     <NavLink href="/contact">{n('contact')}</NavLink>

@@ -21,11 +21,17 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   // dynamic font based on locale
-  const fontClass = locale === 'kr' ? notoSansKR.className : outfit.className;
+  const fontClass = 
+    locale === 'kr' ? 'font-neodgm' :
+    locale === 'en' ? 'font-cutepixel' :
+    outfit.className;
   
+  const fontSize = 
+    locale === 'kr' ? 'text-3xl' : 'text-4xl'
+
   return (
     <html lang={locale}>
-      <body className={`${fontClass} flex flex-col min-h-screen `}>
+      <body className={`${fontClass} ${fontSize} flex flex-col min-h-screen`}>
         <NextIntlClientProvider messages={ messages }>
           <Navbar />
           <main className="flex-grow">

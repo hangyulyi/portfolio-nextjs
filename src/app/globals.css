@@ -9,6 +9,20 @@ body,
   background-color: #f2f0ef;
 }
 
+@font-face {
+  font-family: "CutePixel";
+  src: url('/assets/fonts/CutePixel.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "neodgm";
+  src: url('/assets/fonts/neodgm.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* Icon hover on MySkillsPage */
 .icon-hover {
