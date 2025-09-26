@@ -30,7 +30,7 @@ export default function Monitor () {
         } else if (name === 'LinkedIn') {
             window.open('https://www.linkedin.com/in/yihangyul/', '_blank')
         } else if (name === 'Resume') {
-            window.open('/assets/Hangyul-Yi_Resume(2025).pdf', '_blank')
+            window.open('/assets/Hangyul-Yi_Resume(2026).pdf', '_blank')
         }
     }
 
