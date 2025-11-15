@@ -27,7 +27,8 @@
         "title": "Contact Me",
         "title_blurb": "You can message me with the form below! Please hesitate to reach out :]",
         "messageSent": "Message sent!",
-        "messageError": "Error sending message"
+        "messageError": "Error sending message",
+        "spamError": "Your message has been flagged as spam and will not be sent. If you don't think it's spam, the website thinks otherwise"
     },
     "Projects": {
         "title": "Projects"
